@@ -1,0 +1,17 @@
+define(['jquery', 'jqueryui', 'local_whatsapp/floating-wpp'], function($, jui, float) {
+
+    var init = function(config) {
+        $("#course-footer").floatingWhatsApp({
+            phone: config['phonenumber'],
+            headerTitle: config['headertitle'],
+            popupMessage: config['popupmessage'],
+            showPopup: config['showpopup'],
+            buttonImage: "<img src='" + config['buttonimage'] + "' />",
+            position: config['position']
+        });
+    };
+    
+    return {
+        init: init,
+    };
+});
