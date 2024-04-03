@@ -21,15 +21,11 @@ function local_whatsapp_extend_navigation(global_navigation $nav) {
     $phonenumber = get_config('local_whatsapp', 'phonenumber');
     $popupmessage = get_config('local_whatsapp', 'popupmessage');
     $headertitle = get_config('local_whatsapp', 'headertitle');
-    $showpopup = get_config('local_whatsapp', 'showpopup');
-    $position = get_config('local_whatsapp', 'position');
 
     $config = [
         'phonenumber' => $phonenumber,
         'popupmessage' => $popupmessage,
         'headertitle' => $headertitle,
-        'showpopup' => $showpopup,
-        'position' => $position,
         'whatsappicon' => $whatsappicon,
         'sendicon' => $sendicon,
     ];
