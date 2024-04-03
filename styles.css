@@ -1,95 +1,84 @@
-.floating-wpp {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    font-size: 14px;
-    transition: bottom .2s
-}
-
-.floating-wpp .floating-wpp-button {
-    position: relative;
+.local_whatsapp_floating_button {
+    border: none;
     border-radius: 50%;
+    padding: 0;
     box-shadow: 1px 1px 4px rgba(60, 60, 60, .4);
-    transition: box-shadow .2s;
     cursor: pointer;
-    overflow: hidden
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    right: 2rem;
+    bottom: 6rem;
+    width: 52px;
+    height: 52px;
 }
 
-.floating-wpp .floating-wpp-button img, .floating-wpp .floating-wpp-button svg {
-    position: absolute;
+.local_whatsapp_whatsapp_image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0)
+    border-radius: 50%;
 }
 
-.floating-wpp:hover {
-    bottom: 17px
-}
 
-.floating-wpp:hover .floating-wpp-button {
-    box-shadow: 1px 2px 8px rgba(60, 60, 60, .4)
-}
-
-.floating-wpp .floating-wpp-popup {
+.local_whatsapp_popup {
     border-radius: 6px;
-    background-color: #E5DDD5;
-    position: absolute;
+    background-color: #e5ddd5;
+    position: fixed;
     overflow: hidden;
     padding: 0;
-    box-shadow: 1px 2px 8px rgba(60, 60, 60, .25);
+    box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.25);
     width: 0;
     height: 0;
-    bottom: 0;
+    right: 2rem;
+    bottom: 8rem;
     opacity: 0;
-    transition: bottom .1s ease-out, opacity .2s ease-out;
-    transform-origin: bottom
+    transition: bottom 0.1s ease-out, opacity 0.2s ease-out;
+    transform-origin: bottom;
 }
 
-.floating-wpp .floating-wpp-popup.active {
+.local_whatsapp_popup.active {
     padding: 0 12px 12px;
     width: 260px;
     height: auto;
-    bottom: 82px;
-    opacity: 1
-}
-
-.floating-wpp .floating-wpp-popup .floating-wpp-message {
-    background-color: #fff;
-    color: #212529;
-    padding: 8px;
-    border-radius: 0 5px 5px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, .15);
-    opacity: 0;
-    transition: opacity .2s;
-}
-
-.floating-wpp .floating-wpp-popup.active .floating-wpp-message {
+    bottom: 10rem;
     opacity: 1;
-    transition-delay: .2s
 }
 
-.floating-wpp .floating-wpp-popup .floating-wpp-head {
+.local_whatsapp_popup_header {
     text-align: right;
     color: #fff;
     margin: 0 -15px 10px;
     padding: 6px 12px;
     display: flex;
     justify-content: space-between;
-    cursor: pointer
+    background-color: #128C7E;
 }
 
-.floating-wpp .floating-wpp-input-message {
+.local_whatsapp_popup_message {
+    background-color: #fff;
+    color: #212529;
+    padding: 8px;
+    border-radius: 0 5px 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.local_whatsapp_popup.active .local_whatsapp_popup_message {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.local_whatsapp_input_message_container {
     background-color: #fff;
     margin: 10px -15px -15px;
     padding: 0 15px;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
-.floating-wpp .floating-wpp-input-message textarea {
+.local_whatsapp_input_message {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: none;
@@ -99,11 +88,22 @@
     max-width: 100%;
     font-family: inherit;
     font-size: inherit;
-    resize: none
+    resize: none;
 }
 
-.floating-wpp .floating-wpp-btn-send {
+.local_whatsapp_button_send {
     margin-left: 12px;
     font-size: 0;
-    cursor: pointer
+    cursor: pointer;
+} 
+
+@media (min-width: 992px) {
+    /* When drawer is open, the button and popup is moved to left */
+
+    .jsenabled #page.drawers.show-drawer-right .local_whatsapp_floating_button {
+        right: calc(315px + 2rem);
+    }
+    .jsenabled #page.drawers.show-drawer-right .local_whatsapp_popup {
+        right: calc(315px + 2rem);
+    }
 }
