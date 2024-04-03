@@ -1,0 +1,44 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_whatsapp/popup
+
+    TODO describe template popup
+
+    Example context (json):
+    {
+    }
+}}
+
+{{! <div id="local_whatsapp_popup" class="local_whatsapp_popup">
+    popup
+</div> }}
+
+<div class="local_whatsapp_popup" id="local_whatsapp_popup" tabindex="-1" role="dialog" aria-labelledby="whatsapp_modal" aria-hidden="true">
+    <div class="local_whatsapp_popup_header">
+      <h5 class="h6">{{headertitle}}</h5>
+    </div>
+    <div>
+      <p class="local_whatsapp_popup_message">{{popupmessage}}</p>
+      <div class="local_whatsapp_input_message_container">
+        <textarea placeholder="Type your message..." class="local_whatsapp_input_message"></textarea>
+        <button style="padding:8px" class="btn local_whatsapp_button_send" type="button">
+          <img src="{{sendicon}}" alt="Send icon">
+        </button>
+      </div>
+    </div>
+</div>
