@@ -23,13 +23,6 @@
 
 import { renderTemplate } from "./utils/render";
 
-// 'phonenumber' => $phonenumber,
-// 'popupmessage' => $popupmessage,
-// 'headertitle' => $headertitle,
-// 'showpopup' => $showpopup,
-// 'position' => $position,
-// 'whatsappicon' => $whatsappicon,
-
 /**
  * Init function for render floating whatsapp
  *
@@ -52,21 +45,47 @@ export async function init({
   sendicon,
 }) {
   await renderTemplate("local_whatsapp/floating_button", {
-    phonenumber,
     popupmessage,
     headertitle,
     showpopup,
     position,
     whatsappicon,
-    sendicon
+    sendicon,
   });
   const floatingButton = document.getElementById(
     "local_whatsapp_floating_button"
   );
+  const closeButton = document.getElementById("local_whatsapp_close_button");
+  const buttonSend = document.getElementById("local_whatsapp_button_send");
+  const inputMessage = document.getElementById("local_whatsapp_input_message");
 
-  floatingButton.addEventListener("click", () => {
-    openPopup();
+  floatingButton.addEventListener("click", togglePopup);
+  closeButton.addEventListener("click", togglePopup);
+  buttonSend.addEventListener("click", () => {
+    sendWhatsappMessage({ phonenumber, message: inputMessage.value });
   });
+  inputMessage.addEventListener("keypress", (event) => {
+    if (event.key === "Enter" && !event.shiftKey && !verifyIfMobile()) {
+      event.preventDefault();
+      sendWhatsappMessage({ phonenumber, message: inputMessage.value });
+    }
+  });
+}
+
+/**
+ * Send message to whatsapp
+ * @param {Object} options
+ * @param {number} options.phonenumber
+ * @param {string} options.message
+ */
+function sendWhatsappMessage({ phonenumber, message }) {
+  let apilink = "http://";
+  const isMobile = verifyIfMobile();
+  apilink += isMobile ? "api" : "web";
+  apilink +=
+    ".whatsapp.com/send?phone=" + phonenumber + "&text=" + encodeURI(message);
+
+  window.open(apilink);
 }
 
 /**
@@ -74,21 +93,23 @@ export async function init({
  *
  * @returns {boolean} true if mobile or false if not
  */
-// function isMobile() {
-//   const regex =
-//     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-//   return regex.test(navigator.userAgent);
-// }
+function verifyIfMobile() {
+  const regex =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return regex.test(navigator.userAgent);
+}
 
 /**
- *
+ * Close or open popup
  */
-function openPopup() {
+function togglePopup() {
   const popup = document.getElementById("local_whatsapp_popup");
-  popup.classList.add("active");
+  const inputMessage = document.getElementById("local_whatsapp_input_message");
 
-  // if (!$popup.hasClass('active')) {
-  //     $popup.addClass('active');
-  //     $textarea.focus();
-  // }
+  if (!popup.classList.contains("active")) {
+    popup.classList.add("active");
+    inputMessage.focus();
+  } else {
+    popup.classList.remove("active");
+  }
 }
