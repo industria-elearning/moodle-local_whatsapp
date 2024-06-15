@@ -30,6 +30,7 @@ import { renderTemplate } from "./utils/render";
  * @param {number} settings.phonenumber
  * @param {string} settings.popupmessage
  * @param {string} settings.headertitle
+ * @param {string} settings.position
  * @param {string} settings.whatsappicon
  * @param {string} settings.sendicon
  */
@@ -37,12 +38,14 @@ export async function init({
   phonenumber,
   popupmessage,
   headertitle,
+  position,
   whatsappicon,
   sendicon,
 }) {
   await renderTemplate("local_whatsapp/floating_button", {
     popupmessage,
     headertitle,
+    position,
     whatsappicon,
     sendicon,
   });

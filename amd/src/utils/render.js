@@ -31,7 +31,7 @@ import Templates from "core/templates";
 export async function renderTemplate(templateName, context = {}) {
   return Templates.renderForPromise(templateName, context)
     .then(({ html, js }) => {
-      return Templates.appendNodeContents("#page-footer", html, js);
+      return Templates.appendNodeContents("body", html, js);
     })
     .catch((error) => displayException(error));
 }
