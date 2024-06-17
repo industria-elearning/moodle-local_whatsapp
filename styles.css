@@ -13,6 +13,10 @@
     height: 52px;
 }
 
+.local_whatsapp_position_left {
+    left: 2rem;
+}
+
 .local_whatsapp_whatsapp_image {
     width: 100%;
     height: 100%;
@@ -36,6 +40,7 @@
     transition: bottom 0.1s ease-out, opacity 0.2s ease-out;
     transform-origin: bottom;
 }
+
 
 .local_whatsapp_popup.active {
     padding: 0 12px 12px;
@@ -95,7 +100,7 @@
     margin-left: 12px;
     font-size: 0;
     cursor: pointer;
-} 
+}
 
 @media (min-width: 992px) {
     /* When drawer is open, the button and popup is moved to left */
@@ -103,6 +108,7 @@
     .jsenabled #page.drawers.show-drawer-right .local_whatsapp_floating_button {
         right: calc(315px + 2rem);
     }
+
     .jsenabled #page.drawers.show-drawer-right .local_whatsapp_popup {
         right: calc(315px + 2rem);
     }
