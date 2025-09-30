@@ -24,7 +24,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-
+/**
+ * Extend the navigation menu.
+ *
+ * @param global_navigation $nav The navigation menu to extend.
+ */
 function local_whatsapp_extend_navigation(global_navigation $nav) {
     global $PAGE, $CFG, $OUTPUT;
 

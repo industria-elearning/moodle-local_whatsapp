@@ -1,4 +1,0 @@
-CHANGELOG
-Whastapp Chat
-- - - -
-## [v1] September 04, 2020

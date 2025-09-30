@@ -21,18 +21,18 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-import { renderTemplate } from "./utils/render";
+import {renderTemplate} from "./utils/render";
 
 /**
  * Init function for render floating whatsapp
  *
  * @param {Object} settings
- * @param {number} settings.phonenumber
- * @param {string} settings.popupmessage
- * @param {string} settings.headertitle
- * @param {string} settings.position
- * @param {string} settings.whatsappicon
- * @param {string} settings.sendicon
+ * @param {number} settings.phonenumber The phone number to send the message to
+ * @param {string} settings.popupmessage The message to show in the popup
+ * @param {string} settings.headertitle The title of the popup
+ * @param {string} settings.position The position of the floating button (right or left)
+ * @param {string} settings.whatsappicon The icon of the floating button
+ * @param {string} settings.sendicon The icon of the send button
  */
 export async function init({
   phonenumber,

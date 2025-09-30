@@ -24,19 +24,20 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Whatsapp Chat';
-$string['privacy:metadata'] = 'The Whastapp Chat plugins do not store user data.';
-$string['phonenumber'] = 'Phone number';
-$string['phonenumber_desc'] = 'Phone number';
-$string['popupmessage'] = 'PopUp message';
-$string['popupmessage_desc'] = 'PopUp message';
+$string['default_headertitle'] = 'Hello, how can we help you?';
+$string['default_phonenumber'] = 'xxxxxx';
+$string['default_popupmessage'] = 'Chat with us on WhatsApp!';
 $string['headertitle'] = 'Header title';
-$string['headertitle_desc'] = 'Header title';
-$string['showpopup'] = 'Show PopUp';
-$string['showpopup_desc'] = 'Show PopUp';
-$string['position'] = 'Position';
-$string['position_desc'] = 'Position of the button';
-$string['right'] = 'Right';
+$string['headertitle_desc'] = 'Text displayed in the chat window header.';
 $string['left'] = 'Left';
-$string['showpoup_desc'] = 'showpoup_desc/local_whatsapp';
-$string['showpoup'] = 'showpoup/local_whatsapp';
+$string['phonenumber'] = 'Phone number';
+$string['phonenumber_desc'] = 'Phone number (include country code, numbers only).';
+$string['pluginname'] = 'WhatsApp Chat';
+$string['popupmessage'] = 'Popup message';
+$string['popupmessage_desc'] = 'Message shown in the floating button or popup.';
+$string['position'] = 'Position';
+$string['position_desc'] = 'Position of the button on the screen.';
+$string['privacy:metadata'] = 'The WhatsApp Chat plugin does not store any personal data.';
+$string['right'] = 'Right';
+$string['showpopup'] = 'Show popup';
+$string['showpopup_desc'] = 'Show or hide the popup message.';
