@@ -25,19 +25,20 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['default_headertitle'] = 'Hola, ¿cómo podemos ayudarte?';
-$string['default_phonenumber'] = 'xxxxxx';
-$string['default_popupmessage'] = '¡Chatea con nosotros por WhatsApp!';
+$string['default_popupmessage'] = '¡Chatea con nosotros en WhatsApp!';
 $string['headertitle'] = 'Título del encabezado';
-$string['headertitle_desc'] = 'Texto que se muestra en el encabezado de la ventana de chat.';
+$string['headertitle_desc'] = 'Texto mostrado en el encabezado de la ventana de chat.';
+$string['invalid_phone_number'] = 'Formato de número de teléfono inválido.';
 $string['left'] = 'Izquierda';
 $string['phonenumber'] = 'Número de teléfono';
 $string['phonenumber_desc'] = 'Número de teléfono (incluye el código de país, solo números).';
 $string['pluginname'] = 'Chat de WhatsApp';
-$string['popupmessage'] = 'Mensaje del popup';
-$string['popupmessage_desc'] = 'Mensaje que se muestra en el botón flotante o popup.';
+$string['popupmessage'] = 'Mensaje emergente';
+$string['popupmessage_desc'] = 'Mensaje mostrado en el botón flotante o ventana emergente.';
 $string['position'] = 'Posición';
 $string['position_desc'] = 'Posición del botón en la pantalla.';
-$string['privacy:metadata'] = 'El complemento Chat de WhatsApp no almacena datos personales.';
+$string['privacy:metadata'] = 'El plugin local_whatsapp no almacena ningún dato personal.';
 $string['right'] = 'Derecha';
-$string['showpopup'] = 'Mostrar popup';
+$string['searchcountry'] = 'Buscar país';
+$string['showpopup'] = 'Mostrar mensaje emergente';
 $string['showpopup_desc'] = 'Mostrar u ocultar el mensaje emergente.';

@@ -38,7 +38,9 @@ $string['popupmessage'] = 'Popup message';
 $string['popupmessage_desc'] = 'Message shown in the floating button or popup.';
 $string['position'] = 'Position';
 $string['position_desc'] = 'Position of the button on the screen.';
+$string['privacy:metadata'] = 'The local_whatsapp plugin does not store any personal data.';
 $string['right'] = 'Right';
 $string['searchcountry'] = 'Search country';
 $string['showpopup'] = 'Show popup';
 $string['showpopup_desc'] = 'Show or hide the popup message.';
+
