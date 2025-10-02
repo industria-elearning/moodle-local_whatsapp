@@ -82,7 +82,7 @@ to complete the installation from the command line.
 
 ## License ##
 
-2025 Wilber Narvaez <wilber@buendata.com>
+2025 Data Curso <https://datacurso.com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
