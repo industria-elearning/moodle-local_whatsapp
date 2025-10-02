@@ -21,12 +21,17 @@
 
     Example context (json):
     {
+        "whatsappicon": "http://mysite.com/theme/image.php/boost/local_whatsapp/1759427269/whatsapp",
+        "sendicon": "http://mysite.com/theme/image.php/boost/local_whatsapp/1759427279/send",
+        "popupmessage": "Chat with us on WhatsApp!",
+        "headertitle": "Hello, how can we help you?",
+        "position": "right"
     }
 }}
 
 <div>
     <button id="local_whatsapp_floating_button" class="local_whatsapp_floating_button local_whatsapp_position_{{position}}">
-        {{#pix}}whatsapp,local_whatsapp, {{#str}} send, local_whatsapp {{/str}}{{/pix}}
+        <img class="local_whatsapp_whatsapp_image" src="{{whatsappicon}}" alt="{{#str}} whatsappicon, local_whatsapp {{/str}}">
     </button>
 
     {{> local_whatsapp/popup }}
