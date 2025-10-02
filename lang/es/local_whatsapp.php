@@ -24,12 +24,15 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['close'] = 'Cerrar';
 $string['default_headertitle'] = 'Hola, ¿cómo podemos ayudarte?';
 $string['default_popupmessage'] = '¡Chatea con nosotros en WhatsApp!';
 $string['headertitle'] = 'Título del encabezado';
 $string['headertitle_desc'] = 'Texto mostrado en el encabezado de la ventana de chat.';
 $string['invalid_phone_number'] = 'Formato de número de teléfono inválido.';
 $string['left'] = 'Izquierda';
+$string['messageinput'] = 'Campo de entrada de mensaje';
+$string['openwhatsappchat'] = 'Abrir chat de WhatsApp';
 $string['phonenumber'] = 'Número de teléfono';
 $string['phonenumber_desc'] = 'Número de teléfono (incluye el código de país, solo números).';
 $string['pluginname'] = 'Chat de WhatsApp';
@@ -41,6 +44,8 @@ $string['privacy:metadata'] = 'El plugin local_whatsapp no almacena ningún dato
 $string['right'] = 'Derecha';
 $string['searchcountry'] = 'Buscar país';
 $string['send'] = 'Enviar';
+$string['sendmessage'] = 'Enviar mensaje';
 $string['showbutton'] = 'Mostrar botón de WhatsApp';
 $string['showbutton_desc'] = 'Mostrar u ocultar el botón de chat de WhatsApp en todas las páginas.';
+$string['typeyourmessage'] = 'Escribe tu mensaje';
 $string['whatsappicon'] = 'Icono de WhatsApp';

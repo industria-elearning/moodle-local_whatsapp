@@ -30,10 +30,17 @@
 }}
 
 <div>
-    <button id="local_whatsapp_floating_button" class="local_whatsapp_floating_button local_whatsapp_position_{{position}}">
-        <img class="local_whatsapp_whatsapp_image" src="{{whatsappicon}}" alt="{{#str}} whatsappicon, local_whatsapp {{/str}}">
+    <button id="local_whatsapp_floating_button"
+            class="local_whatsapp_floating_button local_whatsapp_position_{{position}}"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="local_whatsapp_popup"
+            aria-expanded="false"
+            aria-label="{{#str}} openwhatsappchat, local_whatsapp {{/str}}">
+        <img class="local_whatsapp_whatsapp_image"
+             src="{{whatsappicon}}"
+             alt="{{#str}} whatsappicon, local_whatsapp {{/str}}">
     </button>
 
     {{> local_whatsapp/popup }}
-
 </div>

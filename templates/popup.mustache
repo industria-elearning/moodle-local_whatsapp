@@ -27,18 +27,44 @@
     }
 }}
 
-<div class="local_whatsapp_popup local_whatsapp_position_{{position}}" id="local_whatsapp_popup" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="local_whatsapp_popup local_whatsapp_position_{{position}}"
+     id="local_whatsapp_popup"
+     tabindex="-1"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="local_whatsapp_popup_title"
+     aria-describedby="local_whatsapp_popup_desc">
+     
     <div class="local_whatsapp_popup_header">
-      {{#headertitle}}<h5 class="h6 text-white">{{headertitle}}</h5>{{/headertitle}}
-        <button id="local_whatsapp_close_button" type="button" class="close text-white" aria-label="Close">
+      {{#headertitle}}<h5 id="local_whatsapp_popup_title" class="h6 text-white">{{headertitle}}</h5>{{/headertitle}}
+        <button id="local_whatsapp_close_button"
+                type="button"
+                class="close text-white"
+                aria-label="{{#str}} close, local_whatsapp {{/str}}">
           <span aria-hidden="true">&times;</span>
         </button>
     </div>
+
     <div>
-      <p class="local_whatsapp_popup_message">{{popupmessage}}</p>
+      <p class="local_whatsapp_popup_message" id="local_whatsapp_popup_desc">
+        {{popupmessage}}
+      </p>
+
       <div class="local_whatsapp_input_message_container">
-        <textarea id="local_whatsapp_input_message" placeholder="Type your message..." class="local_whatsapp_input_message"></textarea>
-        <button id="local_whatsapp_button_send" style="padding:8px" class="btn local_whatsapp_button_send" type="button">
+        <label for="local_whatsapp_input_message" class="visually-hidden sr-only">
+          {{#str}} messageinput, local_whatsapp {{/str}}
+        </label>
+        <textarea id="local_whatsapp_input_message"
+                  placeholder="{{#str}} typeyourmessage, local_whatsapp {{/str}}"
+                  class="local_whatsapp_input_message"
+                  aria-label="{{#str}} typeyourmessage, local_whatsapp {{/str}}"></textarea>
+
+        <button id="local_whatsapp_button_send"
+                style="padding:8px"
+                class="btn local_whatsapp_button_send"
+                type="button"
+                aria-label="{{#str}} sendmessage, local_whatsapp {{/str}}">
           {{#pix}}send,local_whatsapp, {{#str}} send, local_whatsapp {{/str}}{{/pix}}
         </button>
       </div>
