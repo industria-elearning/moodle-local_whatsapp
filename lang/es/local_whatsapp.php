@@ -40,5 +40,6 @@ $string['position_desc'] = 'Posición del botón en la pantalla.';
 $string['privacy:metadata'] = 'El plugin local_whatsapp no almacena ningún dato personal.';
 $string['right'] = 'Derecha';
 $string['searchcountry'] = 'Buscar país';
+$string['send'] = 'Enviar';
 $string['showpopup'] = 'Mostrar mensaje emergente';
 $string['showpopup_desc'] = 'Mostrar u ocultar el mensaje emergente.';
