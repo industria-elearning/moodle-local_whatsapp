@@ -33,12 +33,11 @@ if ( $hassiteconfig ) {
     $ADMIN->add( 'localplugins', $settings );
 
     $settings->add(
-        new admin_setting_configtext(
+        new \local_whatsapp\admin_setting_phone(
             'local_whatsapp/phonenumber',
             new lang_string('phonenumber', 'local_whatsapp'),
             new lang_string('phonenumber_desc', 'local_whatsapp'),
-            get_string('default_phonenumber', 'local_whatsapp'),
-            PARAM_TEXT
+            '',
         )
     );
 

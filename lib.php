@@ -22,6 +22,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+use local_whatsapp\phone_data;
+
 defined('MOODLE_INTERNAL') || die();
 
 /**
@@ -42,6 +44,9 @@ function local_whatsapp_extend_navigation(global_navigation $nav) {
     $popupmessage = get_config('local_whatsapp', 'popupmessage');
     $headertitle = get_config('local_whatsapp', 'headertitle');
     $position = get_config('local_whatsapp', 'position');
+
+    $phonenumber = json_decode($phonenumber, true);
+    $phonenumber = phone_data::get_phone_with_code($phonenumber['alpha2'], $phonenumber['number']);
 
     $config = [
         'phonenumber' => $phonenumber,
