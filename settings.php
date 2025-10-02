@@ -33,6 +33,15 @@ if ( $hassiteconfig ) {
     $ADMIN->add( 'localplugins', $settings );
 
     $settings->add(
+        new admin_setting_configcheckbox(
+            'local_whatsapp/showbutton',
+            new lang_string('showbutton', 'local_whatsapp'),
+            new lang_string('showbutton_desc', 'local_whatsapp'),
+            1
+        )
+    );
+
+    $settings->add(
         new \local_whatsapp\admin_setting_phone(
             'local_whatsapp/phonenumber',
             new lang_string('phonenumber', 'local_whatsapp'),

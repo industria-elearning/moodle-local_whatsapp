@@ -42,6 +42,7 @@ $string['privacy:metadata'] = 'The local_whatsapp plugin does not store any pers
 $string['right'] = 'Right';
 $string['searchcountry'] = 'Search country';
 $string['send'] = 'Send';
-$string['showpopup'] = 'Show popup';
-$string['showpopup_desc'] = 'Show or hide the popup message.';
+$string['showbutton'] = 'Show WhatsApp button';
+$string['showbutton_desc'] = 'Show or hide the WhatsApp chat button on all pages.';
+$string['whatsappicon'] = 'WhatsApp icon';
 

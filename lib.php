@@ -34,6 +34,12 @@ defined('MOODLE_INTERNAL') || die();
 function local_whatsapp_extend_navigation(global_navigation $nav) {
     global $PAGE, $CFG, $OUTPUT;
 
+    // Check if WhatsApp button should be shown.
+    $showbutton = get_config('local_whatsapp', 'showbutton');
+    if (!$showbutton) {
+        return;
+    }
+
     $baserooturl = $CFG->wwwroot;
     $whatsappiconurl = $OUTPUT->image_url('whatsapp', 'local_whatsapp');
     $whatsappicon = $baserooturl. $whatsappiconurl->out_as_local_url();
