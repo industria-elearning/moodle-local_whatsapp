@@ -24,7 +24,7 @@ After installation, configure the plugin through Moodle's administration interfa
 
 1. Navigate to `Site administration > Plugins > Local plugins > WhatsApp Chat`
 
-   ![Configuration link](./__docs__/local_whatsapp_configuration_link.png)
+   ![Configuration link](./__docs__/images/local_whatsapp_configuration_link.png)
 
 2. Configure the following settings:
    - **Show WhatsApp button**: Enable or disable the floating chat button (default: enabled)
@@ -33,7 +33,7 @@ After installation, configure the plugin through Moodle's administration interfa
    - **Header title**: Set the title shown in the chat window header
    - **Position**: Choose between `Left` or `Right` side positioning
 
-    ![Configuration](./__docs__/local_whatsapp_configuration.png)
+    ![Configuration](./__docs__/images/local_whatsapp_configuration.png)
 
 ## Usage
 
@@ -41,11 +41,11 @@ Once configured, users will see a floating WhatsApp button on all Moodle pages.
 
 If the position is set to `Left`, the button will be displayed on the bottom left side of the page. 
 
-![Usage Left](./__docs__/local_whatsapp_usage_left.png)
+![Usage Left](./__docs__/images/local_whatsapp_usage_left.png)
 
 If set to `Right`, it will appear on the bottom right side of the page.
 
-![Usage Right](./__docs__/local_whatsapp_usage_right.png)
+![Usage Right](./__docs__/images/local_whatsapp_usage_right.png)
 
 When the button is clicked:
 
@@ -53,7 +53,7 @@ When the button is clicked:
 2. Users can type their message in the provided text input
 3. Clicking "Send" opens WhatsApp with a pre-filled message to your configured phone number
 
-![Popup](./__docs__/local_whatsapp_popup.png)
+![Popup](./__docs__/images/local_whatsapp_popup.png)
 
 The plugin enhances user engagement by providing an immediate communication channel for support inquiries, feedback, or general questions.
 
