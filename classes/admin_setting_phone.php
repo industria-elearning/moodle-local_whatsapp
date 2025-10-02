@@ -84,6 +84,9 @@ class admin_setting_phone extends admin_setting {
      * - Both empty: OK (not required).
      * - Both present: validates length and mobile prefixes (if defined).
      * - Partial (one empty): error.
+     *
+     * @param string $alpha2 Country code (e.g., 'US', 'CO')
+     * @param string $numberclean Phone number with only digits
      */
     protected function validate_phone(string $alpha2, string $numberclean) {
         if ($alpha2 === '' && $numberclean === '') {
@@ -193,6 +196,7 @@ class admin_setting_phone extends admin_setting {
      * Render the select (autocomplete) + text input using Core templates.
      *
      * @param mixed $data Can come as array (POST) or string (stored config).
+     * @param string $query Search query (optional).
      */
     public function output_html($data, $query = '') {
         global $OUTPUT, $PAGE;
