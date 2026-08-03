@@ -42,9 +42,9 @@ function local_whatsapp_extend_navigation(global_navigation $nav) {
 
     $baserooturl = $CFG->wwwroot;
     $whatsappiconurl = $OUTPUT->image_url('whatsapp', 'local_whatsapp');
-    $whatsappicon = $baserooturl. $whatsappiconurl->out_as_local_url();
+    $whatsappicon = $baserooturl . $whatsappiconurl->out_as_local_url();
     $sendiconurl = $OUTPUT->image_url('send', 'local_whatsapp');
-    $sendicon = $baserooturl. $sendiconurl->out_as_local_url();
+    $sendicon = $baserooturl . $sendiconurl->out_as_local_url();
 
     $phonenumber = get_config('local_whatsapp', 'phonenumber');
     if (empty($phonenumber)) {

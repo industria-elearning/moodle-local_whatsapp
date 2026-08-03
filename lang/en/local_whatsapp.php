@@ -50,4 +50,3 @@ $string['showbutton'] = 'Show WhatsApp button';
 $string['showbutton_desc'] = 'Show or hide the WhatsApp chat button on all pages.';
 $string['typeyourmessage'] = 'Type your message';
 $string['whatsappicon'] = 'WhatsApp icon';
-

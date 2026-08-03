@@ -172,7 +172,6 @@ class admin_setting_phone extends admin_setting {
 
             $tostore = json_encode(['alpha2' => $alpha2, 'number' => $numberclean]);
             return $this->config_write($this->name, $tostore) ? '' : get_string('errorsetting', 'admin');
-
         } else {
             // String: normalize if JSON, otherwise save as is.
             if ($data === '' || $data === null) {
@@ -277,4 +276,3 @@ class admin_setting_phone extends admin_setting {
         );
     }
 }
-

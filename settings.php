@@ -24,13 +24,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-if ( $hassiteconfig ) {
-
-    $settings = new admin_settingpage( 'local_whatsapp',
+if ($hassiteconfig) {
+    $settings = new admin_settingpage(
+        'local_whatsapp',
         new lang_string('pluginname', 'local_whatsapp')
     );
 
-    $ADMIN->add( 'localplugins', $settings );
+    $ADMIN->add('localplugins', $settings);
 
     $settings->add(
         new admin_setting_configcheckbox(
@@ -80,5 +80,6 @@ if ( $hassiteconfig ) {
             new lang_string('position_desc', 'local_whatsapp'),
             "right",
             $positions,
-    ));
+        )
+    );
 }
