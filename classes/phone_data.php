@@ -1963,6 +1963,10 @@ class phone_data {
      */
     public static function get_country_code($alpha2) {
         $countries = self::get_data();
+        // Country keys in get_data() are uppercase (e.g. 'PE'), while
+        // admin_setting_phone stores the alpha2 selector in lowercase (e.g. 'pe').
+        // Normalise the casing so the lookup resolves regardless of how it was stored.
+        $alpha2 = strtoupper($alpha2);
         return $countries[$alpha2]['country_code'];
     }
 

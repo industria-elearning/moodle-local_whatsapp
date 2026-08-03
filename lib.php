@@ -62,6 +62,9 @@ function local_whatsapp_extend_navigation(global_navigation $nav) {
         return;
     }
     $phonenumber = phone_data::get_phone_with_code($phonenumber['alpha2'], $phonenumber['number']);
+    // wa.me requires the international number as DIGITS ONLY (no leading "+", spaces
+    // or punctuation); a leading "+" makes WhatsApp fail to resolve the chat target.
+    $phonenumber = preg_replace('/\D+/', '', $phonenumber);
 
     $config = [
         'phonenumber' => $phonenumber,
