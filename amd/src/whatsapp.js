@@ -76,13 +76,12 @@ export async function init({
  * @param {string} options.message
  */
 function sendWhatsappMessage({ phonenumber, message }) {
-  let apilink = "http://";
-  const isMobile = verifyIfMobile();
-  apilink += isMobile ? "api" : "web";
-  apilink +=
-    ".whatsapp.com/send?phone=" + phonenumber + "&text=" + encodeURI(message);
+  // Universal WhatsApp deep link: works on mobile and desktop, forces HTTPS,
+  // and encodeURIComponent encodes the full message (& ? = # included).
+  const apilink =
+    "https://wa.me/" + phonenumber + "?text=" + encodeURIComponent(message);
 
-  window.open(apilink);
+  window.open(apilink, "_blank", "noopener");
 }
 
 /**

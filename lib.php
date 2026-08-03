@@ -47,11 +47,20 @@ function local_whatsapp_extend_navigation(global_navigation $nav) {
     $sendicon = $baserooturl. $sendiconurl->out_as_local_url();
 
     $phonenumber = get_config('local_whatsapp', 'phonenumber');
+    if (empty($phonenumber)) {
+        // No phone configured yet: bail out before json_decode to avoid
+        // "access array offset on null" warnings on every page (PHP 8.1+),
+        // which fire by default because showbutton defaults to 1.
+        return;
+    }
     $popupmessage = get_config('local_whatsapp', 'popupmessage');
     $headertitle = get_config('local_whatsapp', 'headertitle');
     $position = get_config('local_whatsapp', 'position');
 
     $phonenumber = json_decode($phonenumber, true);
+    if (empty($phonenumber['alpha2']) || empty($phonenumber['number'])) {
+        return;
+    }
     $phonenumber = phone_data::get_phone_with_code($phonenumber['alpha2'], $phonenumber['number']);
 
     $config = [
